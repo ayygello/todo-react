@@ -23,17 +23,22 @@ const Tuesday = () => {
 
   return (
     <>
-      <form>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          handleOnAdd(form);
+        }}
+      >
         <input
           className='add-form'
           type='text'
-          name='name'
           placeholder='Add a task...'
           maxLength={45}
+          required
           value={form}
           onChange={handleOnChange}
         />
-        <button className='btn-add' onClick={() => handleOnAdd(form)}>
+        <button type='sumbit' className='btn-add'>
           ✚
         </button>
       </form>

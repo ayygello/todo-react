@@ -23,7 +23,7 @@ const App = () => {
           <Route path={`/friday`} element={<Friday />} />
           <Route path={`/saturday`} element={<Saturday />} />
           <Route path={`/sunday`} element={<Sunday />} />
-          <Route path='*' element={<Navigate to='/monday' replace />} />
+          <Route path='/' element={<Navigate to='/monday' replace />} />
         </Routes>
       </div>
     </>
